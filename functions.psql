@@ -1,0 +1,11 @@
+create or replace function last_weekday() returns text
+as '/tmp/golang-psql-functions.so', 'lastWeekday'
+language c strict;
+
+create or replace function ns_to_time(bigint) returns text
+as '/tmp/golang-psql-functions.so', 'nsToTime'
+language c strict;
+
+create or replace function ns_to_time(text) returns text
+as '/tmp/golang-psql-functions.so', 'nsStringToTime'
+language c strict;
